@@ -1,4 +1,5 @@
 ls
+hostname
 if [ -d hello-world-war ]
 then
 rm -rf *

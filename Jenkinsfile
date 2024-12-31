@@ -1,11 +1,5 @@
 pipeline {
-    parameters {
-        string(name: 'cmd', defaultValue: 'package', description: 'Who should I say hello to?')
-
-        choice(name: 'ch', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-
-           }
-    agent {label 'server1' }
+       agent {label 'server1' }
     stages 
     {
         stage('checkout') {
@@ -17,7 +11,7 @@ pipeline {
         stage('build') {
                 steps {
                     sh 'cd hello-world-war'
-                    sh 'mvn clean $cmd'
+                    sh 'mvn clean package'
             }
         }
     }

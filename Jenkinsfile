@@ -23,7 +23,7 @@ pipeline {
 			  success {
 			     echo "pipeline success"
 				 mail (
-				       to: 'nithinkkumar@gmail.com'
+				       to:'nithinkkumar@gmail.com'
 					   subject: "job is success:  ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
 					   body: "the build is succees for ${env.JOB_NAME} - Build #${env.BUILD_NUMBER} was successfull. \n\n" +
                              "view the details here:${env.Build_URL}"
@@ -32,7 +32,7 @@ pipeline {
 		failure {
 		    echo 'pipeline is failed. please check the logs.'
 			mail (
-				       to: 'nithinkkumar@gmail.com'
+				       to:'nithinkkumar@gmail.com'
 					   subject: "job is failed:  ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
 					   body: "the build is failed for ${env.JOB_NAME} - Build #${env.BUILD_NUMBER} was successfull. \n\n" +
                              "view the details here:${env.Build_URL}"

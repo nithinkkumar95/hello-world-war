@@ -14,8 +14,8 @@ pipeline {
                     sh 'mvn clean package'
         stage('deploy') {
 		steps {
-		    sh 'cd /opt/jenkins/workspace/Jenkinsjob/target
-		    sh 'sep hello-world-war-1.0.0.war ubuntu@172.31.47.100 ; /home/ubuntu/apache-tomcat-10.1.34/webapps
+		    sh 'cd /opt/jenkins/workspace/Jenkinsjob/target'
+		    sh 'sep hello-world-war-1.0.0.war ubuntu@172.31.47.100 ; /home/ubuntu/apache-tomcat-10.1.34/webapps'
 		} 
             }
         }

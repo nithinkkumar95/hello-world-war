@@ -25,5 +25,10 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<!---add your own sonar account details -->
+	<properties>
+	    <sonar.projectKey>nithinkkumar95</sonar.projectKey>
+	    <sonar.organization>nithinkkumar95</sonar.organization>
+	    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
 </project>

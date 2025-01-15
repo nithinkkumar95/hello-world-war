@@ -7,17 +7,10 @@ pipeline {
     stages {
         stage('Download Artifact') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'artifactory-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                
                     sh """
-                    sudo su
-                    pwd
-                    cd /opt/
-                    pwd
-                    ls
-                    cd apache-tomcat-10.1.34/
-                    pwd
-                    ls
-                    cd webapps
+                   
+                    cd /home/ubuntu/apache-tomcat-10.1.34/webapps
 
                     # Correct usage of environment variables for curl
                     curl -L -u "\$USERNAME:\$PASSWORD" -O "\$ARTIFACT_URL"
@@ -29,7 +22,7 @@ pipeline {
                     sleep 10
                     ./startup.sh
                     """
-                }
+                
             }
         }
     }

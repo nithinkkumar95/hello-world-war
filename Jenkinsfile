@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        ARTIFACT_URL = 'http://35.154.69.33:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.16/'
+        ARTIFACT_URL = 'http://35.154.69.33:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.16/hello-world-war-1.0.16.war'
         TOMCAT_PATH = '/home/ubuntu/apache-tomcat-10.1.34'
     }
     stages {

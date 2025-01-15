@@ -39,8 +39,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('/pom.xml') }}
           restore-keys: 
 
-       - name: Configure Maven settings
-         run: |
+      - name: Configure Maven settings
+        run: |
           mkdir -p ~/.m2
           echo "<settings>
                   <servers>

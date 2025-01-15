@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Download Artifact') {
             steps {
-                
+                withCredentials([usernamePassword(credentialsId: 'artifactory-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh """
                    
                     cd /home/ubuntu/apache-tomcat-10.1.34/webapps
@@ -22,7 +22,7 @@ pipeline {
                     sleep 10
                     ./startup.sh
                     """
-                
+                }
             }
         }
     }

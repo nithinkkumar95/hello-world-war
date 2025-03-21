@@ -34,7 +34,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sudo snap connect docker:home
+                snap connect docker:home
                 echo "Building Docker image from ${DOCKERFILE_PATH}..."
                 sh "docker build -t ${DOCKER_REPO}:${DOCKER_TAG} -f ${DOCKERFILE_PATH} ."
             }
